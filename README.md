@@ -3,7 +3,7 @@
 [![Go Version](https://img.shields.io/badge/Go-1.22+-00ADD8?style=flat&logo=go)](https://go.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**OpenStreetMap (PBF形式)** の実世界道路網データから有向グラフを構築し、**A\*（A-Star）探索アルゴリズム** を用いて最短経路探索および Google Maps ナビゲーション連携を行う、Go言語製の高性能ルーティングエンジンです。
+**OpenStreetMap (PBF形式)** の実世界道路網データから有向グラフを構築し、**A\*（A-Star）探索アルゴリズム** を用いて最短経路探索および Google Maps ナビゲーション連携を行う、Go言語製のルーティングエンジンです。
 
 ---
 
@@ -52,7 +52,7 @@ flowchart LR
 ```
 
 > **探索結果（緑色ハイライト）**: $\text{出発地} \rightarrow \text{ノード A} \rightarrow \text{ノード C} \rightarrow \text{目的地}$ （総距離: 6.3 km）  
-> 優先度付きキューによる $f(n) = g(n) + h(n)$ の評価により、目的地方向から外れる枝（ノードB・D方面）を早期に刈り込みます。
+> 優先度付きキューによる $f(n) = g(n) + h(n)$ の評価により、目的地方向から外れる枝（ノードB・D方面）を早期に除外します。
 
 ---
 
