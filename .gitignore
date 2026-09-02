@@ -1,0 +1,25 @@
+# Binaries
+routing-engine
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Map data files (large binary datasets)
+*.osm.pbf
+*.pbf
+*.osm
+
+# OS / IDE specific files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+shell.nix
