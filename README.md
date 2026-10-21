@@ -28,12 +28,12 @@
 
 ```mermaid
 flowchart LR
-    Start(("出発地 (Start)"))
+    Start(("出発地 &#40;Start&#41;"))
     N1(("ノード A"))
     N2(("ノード B"))
     N3(("ノード C"))
     N4(("ノード D"))
-    Goal((("目的地 (Goal)")))
+    Goal((("目的地 &#40;Goal&#41;")))
 
     Start -- "2.4 km" --> N1
     Start -- "4.1 km" --> N2
