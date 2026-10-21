@@ -26,30 +26,7 @@
 
 ## 最短経路探索のネットワーク構造
 
-```mermaid
-flowchart LR
-    Start(("出発地 &#40;Start&#41;"))
-    N1(("ノード A"))
-    N2(("ノード B"))
-    N3(("ノード C"))
-    N4(("ノード D"))
-    Goal((("目的地 &#40;Goal&#41;")))
 
-    Start -- "2.4 km" --> N1
-    Start -- "4.1 km" --> N2
-    N1 -- "1.8 km (一方通行)" --> N3
-    N2 -- "3.0 km" --> N4
-    N3 -- "2.1 km" --> Goal
-    N4 -- "5.2 km" --> Goal
-    N1 -. "6.5 km (遠回り)" .-> Goal
-
-    classDef path fill:#2E7D32,stroke:#1B5E20,stroke-width:3px,color:#ffffff;
-    classDef unvisited fill:#ECEFF1,stroke:#90A4AE,stroke-width:1px,color:#37474F;
-    class Start,N1,N3,Goal path;
-    class N2,N4 unvisited;
-
-    linkStyle 0,2,4 stroke:#2E7D32,stroke-width:3px;
-```
 
 > **探索結果（緑色ハイライト）**: $\text{出発地} \rightarrow \text{ノード A} \rightarrow \text{ノード C} \rightarrow \text{目的地}$ （総距離: 6.3 km）  
 > 優先度付きキューによる $f(n) = g(n) + h(n)$ の評価により、目的地方向から外れる枝（ノードB・D方面）を早期に除外します。
